@@ -28,7 +28,7 @@ document.querySelector("#faster").addEventListener("click", function() {
 
 document.querySelector("#skip").addEventListener("click", function() {
 	video.currentTime += 15;
-	console.log(video.playbackRate);
+	console.log(video.currentTime);
 	video.loop = true;
 });
 
