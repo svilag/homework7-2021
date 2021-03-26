@@ -17,12 +17,12 @@ document.querySelector("#pause").addEventListener("click", function() {
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
-	video.playbackRate *=0.95;
+	video.playbackRate *= 0.95;
 	console.log(video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
-	video.playbackRate /=0.95;
+	video.playbackRate /= 0.95;
 	console.log(video.playbackRate);
 });
 
@@ -30,6 +30,7 @@ document.querySelector("#skip").addEventListener("click", function() {
 	video.currentTime += 15;
 	console.log(video.currentTime);
 	video.loop = true;
+	video.play();
 });
 
 document.querySelector("#slider").addEventListener("click", function() {
