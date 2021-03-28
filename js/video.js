@@ -30,7 +30,9 @@ document.querySelector("#skip").addEventListener("click", function() {
 	video.currentTime += 15;
 	console.log(video.currentTime);
 	video.loop = true;
-	video.play();
+	if (video.currentTime <= 15) {
+		video.play()
+	}
 });
 
 document.querySelector("#slider").addEventListener("click", function() {
