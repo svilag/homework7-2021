@@ -27,10 +27,12 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	video.currentTime += 15;
 	console.log(video.currentTime);
-	video.loop = true;
-	if (video.currentTime <= 15) {
+	if (video.currentTime <= video.duration - 15) {
+		video.currentTime += 15;
+	}
+	else {
+		video.currentTime = 0;
 		video.play()
 	}
 });
